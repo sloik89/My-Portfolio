@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800;900;1000&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'sans-serif';
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'sans-serif';
+}
+
+:root {
+  /* colors */
+  --main-red: hsl(0, 68%, 50%);
+  --font-color-dark-1: hsl(0, 0%, 1%);
+  --font-color-dark-2: hsl(0, 0%, 35%);
+  --main-color: hsl(0, 29%, 97%);
+  --lang-color: hsl(0, 29%, 80%);
+  --header-section-color:hsl(0, 0%, 80%);
+  --dark-theme-bg-color:hsl(0, 0%, 1%);
+  /* end of colors */
+
+  --transition:all 0.5s ease-in-out;
+  --max-width: 1400px;
+  --pl-button: 200px;
+  --nav-height: 60px;
+}
+html{
+  scroll-behavior: smooth;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  /* color: var(--font-color-dark-2); */
+  color:inherit;
+  transition: var(--transition);
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+.main-app{
+  background-color: var(--main-color);
+}
+
+button {}
+
+/* utilities classes */
+.section-center {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* background-color: var(--main-color); */
+  /* padding: 20px 0; */
+  color: var(--font-color-dark-2);
+}
+.text-description{
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 500;
+    max-width: 400px;
+}
+
+.header-main{
+  font-size: 1.5rem;
+    padding-bottom: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+@media screen and (min-width:700px){
+  .text-description{
+    font-size: 1.5rem;
+ 
+  }
+    .header-main{
+      font-size: 2.5rem;
+    }
+     
+}
+@media screen and (min-width:900px) {
+   .section-center .hero-btn{
+    font-size: 1.5rem;
+  }
+
+}
+
+/* handle the dark mode */
+.main-app.dark-theme{
+  background-color: var(--dark-theme-bg-color);
+  color:white;
+}
+ .main-app.dark-theme .section-center{
+    color: white;
+ }
+
+
+ 

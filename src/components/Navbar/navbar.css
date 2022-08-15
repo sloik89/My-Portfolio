@@ -1,0 +1,128 @@
+.logo{
+    width: 45px;
+    
+}
+.nav{
+    /* distance between */
+    /* padding: 1rem 0; */
+    height: var(--nav-height);
+    padding: 1rem 0;
+    
+}
+.nav .section-center{
+    
+    /* background-color: var(--main-color); */
+    /* font-size: 0.7rem; */
+    display: flex;
+    align-items: center;
+    /* border:2px solid pink; */
+    justify-content: space-between;
+}
+
+.nav-links{
+   display: none;
+ 
+   text-transform: uppercase;
+   font-weight: 800;
+   letter-spacing: 1px;
+   font-size: 0.9rem;
+
+   
+}
+
+.btn-container{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    
+}
+.menu-bars{
+   display: flex;
+    font-size: 2.5rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.2s linear;
+    color:var(--font-color-dark-2);
+}
+.circle{
+    background-color: var(--main-red);
+    height: 35px;
+    position: absolute;
+    width: 35px;
+    top:0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(200%,calc(100% - 35px));
+    transition: var(--transition);
+}
+.menu-bars:hover .circle{
+    transform: translate(50%, 0);
+}
+.menu-bars:hover{
+   color: var(--font-color-dark-1);
+}
+
+/* ======= hover effects of links  ============*/
+.nav-links li {
+    position: relative;
+}
+.nav-links li::after{
+    content:'';
+    position: absolute;
+    top:120%;
+    left:calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    background-color:var(--main-red);
+    border-radius: 50%;
+    opacity: 0;
+    transition: var(--transition);
+    
+}
+ .nav-links li:hover::after{
+    opacity: 1;
+ }
+ .nav-links li:hover a{
+    color: var(--font-color-dark-1)
+ }
+ /* =========== end of hover effect ============ */
+
+@media screen and (min-width:700px){
+    .menu-bars{
+        display: none;
+    }
+    .nav-links{
+        display: flex;
+        gap:1rem;
+    }
+    
+}
+@media screen and (min-width:1000px){
+    .nav-links{
+        font-size: 1rem;
+    }
+    
+    
+}
+.nav.fixedNav{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    
+    z-index: 2;
+    height: auto;
+}
+nav.fixedNav .logo{
+    
+}
+
+/* hover on dark mode */
+.nav-links.nav-dark li:hover a {
+    color:hsl(0, 0%, 65%);
+
+
+}

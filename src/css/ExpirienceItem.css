@@ -1,0 +1,92 @@
+.expirience-item {
+    margin-top: 100px;
+    width: 70vw;
+    height: 70vw;
+    border-radius: 50%;
+    position: relative;
+    z-index: 3;
+    background: transparent;
+    max-width: 350px;
+    max-height: 350px;
+    cursor: pointer;
+    
+    
+}
+.katana{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    top:-13%;
+    left:0;
+    transform: translate(-100% -100%);
+    border-radius: 50%;
+    background: transparent;
+    transform: translateY(-10px);
+   
+}
+.katana-img{
+    width: 26%;
+    z-index: -1;
+   
+    
+}
+.icon-work{
+    width: 50%;
+}
+@keyframes swordMove{
+    
+    to{
+        transform: translateY(10px);
+    }
+}
+.border-expirience{
+    position: relative;
+    width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-100% -100%);
+        border-radius: 50%;
+        background: var(--circle-color);
+        border:15px solid transparent;
+        border-right-color: var(--main-red);
+        border-top-color: var(--main-red);
+        transform:rotate(-135deg);
+        transition: transform 0.3s linear;   
+        box-shadow: 13px 14px 27px -15px rgba(0, 0, 0, 1);
+}
+
+.expirience-circle-desc{
+    width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-100% -100%);
+        border-radius: 50%;
+        background: transparent;
+        
+}
+.expirience-item:hover .border-expirience{
+    
+    transform: rotate(45deg);
+}
+
+.expirience-circle-desc p {
+    font-size: 24px;
+    font-weight: 600;
+}
+.expirience-item:hover .katana-img{
+animation: swordMove 2s infinite alternate;
+}

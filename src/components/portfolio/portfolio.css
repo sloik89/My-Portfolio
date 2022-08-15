@@ -1,0 +1,36 @@
+.portfolio-center{
+    min-height: 100vh;
+    display: flex;
+}
+.portfolio-title{
+    font-size: 3rem;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+  
+}
+.header-accent{
+    position: relative;
+}
+.header-accent::after{
+    content:'';
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: var(--main-red);
+    border-radius:50%;
+    left:25%;
+    top:25%;
+    z-index: -1;
+}
+.portfolio-wrapper{
+    flex-grow: 1;
+}
+.portfolio-grid-container{
+    padding: 1rem;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap:2rem;
+}
+

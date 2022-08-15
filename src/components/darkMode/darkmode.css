@@ -1,0 +1,44 @@
+.dark-mode{
+    font-size: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    color:var(--font-color-dark-2);
+    transition: var(--transition);
+    
+}
+.sun-icon, .moon-icon{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transform:translate(-50px, 50px);
+    transition: var(--transition);
+    
+}
+/* .sun-icon{
+    position: absolute;
+    top:3px;
+    left: 3px;    
+} */
+
+.dark-mode.theme-dark .moon-icon{
+    transform: translate(0, 0);
+}
+.dark-mode.theme-dark .sun-icon {
+    transform: translate(50px,-50px)
+}
+.dark-mode.theme-light .sun-icon {
+    transform: translate(0, 0)
+}
+.dark-mode.theme-light .moon-icon {
+    transform: translate(-50px,50px)
+}
+/* .dark-mode.theme-dark .sun-icon {
+    top: 3px;
+    left: 3px;
+} */
+.dark-mode:hover{
+    color:var(--font-color-dark-1);
+}

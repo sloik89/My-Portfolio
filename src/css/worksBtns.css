@@ -1,0 +1,22 @@
+.btns-works{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    
+}
+.btns-testimonial{
+    width: 75vw;
+    margin-left: auto;
+    max-width: 1190px;
+}
+
+/* hoover effect on buttons */
+.btn-works{
+    cursor: pointer;
+    transition: .3s linear;
+  
+    
+}
+.btn-works:hover{
+    transform: scale(1.2);
+}

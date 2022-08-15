@@ -1,0 +1,156 @@
+.portfolio .section-center{
+    min-height: 100vh;
+    border:1px solid black;
+    padding: 20px 0;  
+    max-width: var(--max-width);  
+    position: relative;
+}
+.works-title{
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: var(--mobileSpacing);
+    position: relative;
+}
+.works-container{
+    width: 85%;
+    margin-left: auto;
+}
+.works-letter{
+    position: relative;
+}
+.works-letter::after {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    z-index: -1;
+    width: 25px;
+    height: 30px;
+    background-color: var(--main-red);
+    border-radius: 50%;
+}
+
+.main-works{
+    margin-top: var(--mobileSpacing);
+  /* display: flex; */
+  
+}
+
+
+
+.portfolio-title {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 800;
+    opacity: 0.1;
+    font-size: 80px;
+    transform-origin: center;
+    transform: rotate(90deg) translateX(-200px);
+    align-self: center;
+    width: 80px;
+    
+   
+}
+.work-items{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    padding: 40px 0;
+    width: 80%;
+    max-width: 500px;
+    margin:0 auto;
+   
+}
+.work-item{
+    
+    width: 85%;
+    margin:0 auto;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+    
+}
+
+.work-item::after{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity .5s ease-in
+}
+.work-item::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-red);
+    border-radius: 20px;
+    z-index: -1;
+    transition: 0.2s linear;
+}
+.work-item:hover::after {
+   opacity: 1;
+}
+.work-item:hover::before{
+    top: 20px;
+    left: 10px;
+}
+.work-item:hover .work-btn-container{
+    opacity: 1;
+}
+
+.work-btn-container {
+    position: absolute;
+    top:0;
+    z-index: 1;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.2s linear;
+}
+.work-image{
+    width: 100%;
+    border-radius: 20px;
+}
+.work-btn{
+    display: flex;
+    align-items: center;
+}
+.work-btn a {
+    color: white;
+    text-decoration: none;
+}
+@media screen and (min-width:900px){
+   .main-works{ 
+   }
+    .work-items{
+        width: 100%;
+        max-width: unset;
+        margin:0;
+        flex-direction: row;
+        justify-content: space-around;
+        gap:40px;
+       
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    .work-item{
+        width: 30%;
+        margin:0;
+    }
+    .portfolio-title{
+        font-size: 100px;
+        margin:20px;
+    }
+    
+}

@@ -1,0 +1,23 @@
+.btns-works {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    bottom: 1rem;
+}
+
+.btns-testimonial {
+    
+}
+
+/* hoover effect on buttons */
+.btn-works {
+    cursor: pointer;
+    transition: .3s linear;
+
+
+}
+
+.btn-works:hover {
+    transform: scale(1.2);
+}
